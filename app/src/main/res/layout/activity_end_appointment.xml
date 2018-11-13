@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:background="@drawable/join_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sparktalk.hunandchoo.appointmentapplication.EndAppointmentActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/icon"
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:id="@+id/result_text1"
+                android:background="@drawable/join_background"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="10dp"
+                android:text="Result"
+                android:textColor="@color/color_black"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@drawable/result_background"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textSize="25dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="1등" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="80dp"
+                    android:id="@+id/end_recyclerV1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:background="@drawable/result_background"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textSize="25dp"
+                    android:text="지각"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="80dp"
+                    android:id="@+id/end_recyclerV2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:background="@drawable/result_background"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:textSize="25dp"
+                    android:text="벌칙"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/result_text2"
+                    android:background="@drawable/recycler_background"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="벌칙종류!"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/result_text3"
+                    android:layout_margin="10dp"
+                    android:visibility="invisible"
+                    android:textSize="20dp"
+                    android:text="99999"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/result_text4"
+                    android:layout_marginLeft="-60dp"
+                    android:layout_margin="10dp"
+                    android:visibility="invisible"
+                    android:textSize="20dp"
+                    android:text="원"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:background="@drawable/join_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/end_groupMessageAct_recyclerV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/groupMessageAct_Btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <EditText
+            android:id="@+id/end_groupMessageAct_editT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/groupMessageAct_Btn"
+            android:layout_toStartOf="@+id/groupMessageAct_Btn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+        <Button
+            android:id="@+id/end_groupMessageAct_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="보내기"
+            android:textColor="@color/color_white"
+            android:background="@drawable/login_button_background"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sparktalk.hunandchoo.appointmentapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <meta-data
+        android:name="com.kakao.sdk.AppKey"
+        android:value="170124d1d8b75dc107d80943297c2f52" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/icon"
+        android:label="약속해줘"
+        android:largeHeap="true"
+        android:supportsRtl="true">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MakeAppointmentActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EachAppointmentActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".LocationSelectActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EndAppointmentActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".AccountActivity"
+            android:theme="@style/AppTheme" />
+
+    </application>
+
+</manifest>

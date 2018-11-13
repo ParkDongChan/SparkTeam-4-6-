@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@drawable/join_background"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        tools:context="com.sparktalk.hunandchoo.appointmentapplication.MakeAppointmentActivity">
+
+        <TextView
+            android:background="@drawable/login_button_background"
+            android:padding="10dp"
+            android:text="약속 설정하기"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="약속명 입력"
+                android:textColor="@color/color_basic"
+                android:textSize="15dp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/makeAppointmentAct_editT_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="시간 선택"
+                android:textColor="@color/color_basic"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <DatePicker
+                        android:id="@+id/makeAppointmentAct_datePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:datePickerMode="spinner"
+                        android:calendarViewShown="false"
+                        android:layout_marginTop="-40dp"
+                        android:layout_marginBottom="-40dp"
+                        android:layout_marginLeft="-40dp"
+                        android:layout_marginRight="-30dp"
+                        android:scaleY="0.8"
+                        android:scaleX="0.8"></DatePicker>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TimePicker
+                        android:id="@+id/makeAppointmentAct_timePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:timePickerMode="spinner"
+                        android:layout_marginTop="-40dp"
+                        android:layout_marginBottom="-40dp"
+                        android:layout_marginLeft="-30dp"
+                        android:layout_marginRight="-40dp"
+                        android:scaleY="0.8"
+                        android:scaleX="0.8">
+
+                    </TimePicker>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="장소 선택(돋보기 버튼 클릭)"
+                android:textColor="@color/color_basic"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <Button
+                    android:background="@drawable/searcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/makeAppointmentAct_selectLocationBtn"/>
+
+                <TextView
+                    android:id="@+id/makeAppointmentAct_showLocation"
+                    android:background="@drawable/login_input_background"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/color_basic"
+                    android:textSize="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="초대할 친구선택"
+                android:textColor="@color/color_basic"
+                android:textSize="15dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/makeAppointmentAct_recyclerV"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:text="벌칙선택"
+                android:textColor="@color/color_basic"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <Button
+                    android:id="@+id/makeAppointmentAct_money"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/money" />
+
+                <Button
+                    android:id="@+id/makeAppointmentAct_food"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/food" />
+
+                <Button
+                    android:id="@+id/makeAppointmentAct_giftycon"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/giftycon" />
+
+                <Button
+                    android:id="@+id/makeAppointmentAct_hit"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/hit" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/makeAppointmentAct_resultBtn"
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/check" />
+
+                <Button
+                    android:id="@+id/makeAppointmentAct_selectBtn"
+                    android:text="저장하기"
+                    android:textColor="@color/color_white"
+                    android:gravity="center"
+                    android:layout_width="140dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/login_button_background" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+

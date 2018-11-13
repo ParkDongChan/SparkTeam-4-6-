@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:colorControlNormal">@color/color_basic</item>
+        <item name="android:textColorHint">@color/color_basic</item>
+        <item name="android:textColorHighlight">@color/color_white</item>
+        <item name="android:colorControlActivated">@color/color_basic</item>
+    </style>
+
+    <!--Text Input Style-->
+    <style name="styleTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColor">@color/color_basic</item>
+        <item name="android:textColorHint">@color/color_basic</item>
+    </style>
+
+    <!--EditText-->
+    <style name="styleEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textColorHint">@color/color_white</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:windowBackground">@drawable/splash2</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

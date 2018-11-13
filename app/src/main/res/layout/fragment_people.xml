@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/join_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@drawable/people_search"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <EditText
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="54dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:text="   내 프로필"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/peopleFrg_myProfile_recyclerV"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="5dp"
+            android:text="   친구"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/peopleFrg_recyclerV"
+            android:layout_marginTop="130dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/peopleFrg_floatingBtn"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        app:fabSize="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/stat_notify_more"/>
+
+</RelativeLayout>

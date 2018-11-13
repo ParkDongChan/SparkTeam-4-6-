@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/join_background"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.sparktalk.hunandchoo.appointmentapplication.LoginActivity">
+
+    <ImageView
+        android:layout_marginTop="-80dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/login_logo" />
+
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/login_btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_below="@id/login_btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@id/login_btn_google"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="또는"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="7dp"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:src="@drawable/login_email" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_input_background">
+
+                <EditText
+                    android:id="@+id/loginAct_editT_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="15dp"
+                    android:hint="이메일" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="60dp"
+                android:src="@drawable/login_password" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/login_input_background">
+
+                <EditText
+                    android:id="@+id/loginAct_editT_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="비밀번호"
+                    android:textSize="15dp"
+                    android:inputType="textPassword" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:text="로 그 인"
+            android:id="@+id/loginAct_btn_login"
+            android:background="@drawable/login_button_background"
+            android:textStyle="bold"
+            android:textColor="@color/color_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:text="회 원 가 입"
+            android:textStyle="bold"
+            android:background="@drawable/login_button_background"
+            android:textColor="@color/color_white"
+            android:id="@+id/loginAct_btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
